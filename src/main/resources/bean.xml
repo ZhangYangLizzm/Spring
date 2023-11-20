@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="department" class="com.example.demo.Department">
+        <property name="departmentName" value="部門名稱"/>
+    </bean>
+    
+    <bean id="member" class="com.example.demo.Member">
+        <property name="memberName" value="turi"/>
+        <property name="memberAge" value="22"/>
+        <property name="department" ref="department"/>
+    </bean>
+</beans>
